@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@300;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
 /*  font-family: 'Open Sans', sans-serif;
     font-family: 'Oswald', sans-serif; */
@@ -75,7 +74,6 @@ main article {
 .hero {
   background: url(img/hero_bg.jpg) no-repeat;
   height: 720px;
-  font-family: 'Roboto Condensed', sans-serif;
 }
 
 .hero_logo {
@@ -140,6 +138,10 @@ footer {
 
 /* gallery */
 
+.hide {
+  display: none;
+}
+
 .images_con {
   max-width: 1041px;
   margin: 0 auto;
@@ -152,4 +154,266 @@ footer {
 
 .images_con img {
   padding-top: 1em;
+}
+
+/* characters */
+.main_characters {
+  max-width: 1280px;
+  padding: 0 10%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 507px));
+  gap: 5em;
+}
+
+.main_characters section:nth-child(even) {
+  align-items: end;
+}
+
+.main_characters p {
+  color: #999;
+}
+.main_characters section img {
+  max-width: 400px;
+  border: 1px solid #e5e5e5;
+}
+
+.main_characters section {
+  display: flex;
+  flex-direction: column;
+}
+
+.main_characters section h4:nth-child(even) {
+  padding: 2em 0;
+}
+
+.flex_con_chara {
+  display: flex;
+  gap: 2.7em;
+}
+
+.flex_con_chara_white p {
+  color: #fff;
+}
+
+.flex_con_chara div {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+.main_characters section h4:nth-child(odd) {
+  padding-bottom: 3em;
+}
+
+.red {
+  color: #6c0c0e;
+}
+
+/* Media queries */
+
+@media only screen and (max-width: 800px) {
+  /* header */
+
+  header {
+    padding: 0 5%;
+  }
+
+  .navbar ul {
+    gap: 1em;
+  }
+
+  .navbar ul:last-child {
+    gap: 0.3em;
+  }
+
+  /* main */
+
+  .hero {
+    background: url(img/hero_bg_small.jpg) no-repeat;
+    background-size: 100%;
+    height: 340px;
+  }
+
+  .hero_logo {
+    padding: 0 5%;
+  }
+
+  .hero_logo img {
+    padding-top: 1em;
+    width: 70%;
+    height: 100%;
+  }
+
+  .article_1,
+  .article_2 {
+    padding: 2em 5%;
+  }
+
+  .video {
+    padding: 0 5%;
+  }
+
+  .video iframe {
+    width: 100%;
+    height: 325px;
+  }
+
+  /* Gallery */
+
+  .images_con {
+    padding: 0 5%;
+  }
+
+  .images_small {
+    gap: 0;
+    justify-content: space-between;
+  }
+
+  .images_small img {
+    width: 18%;
+  }
+
+  .big_image {
+    width: 100%;
+  }
+
+  /* Characters */
+
+  .main_characters {
+    padding: 0 5%;
+    gap: 1em;
+  }
+
+  .main_characters img {
+    width: 100%;
+  }
+
+  .main_characters section h4:nth-child(even) {
+    padding-top: 0;
+  }
+}
+
+/* Mobile */
+@media only screen and (max-width: 450px) {
+  /* header */
+
+  header {
+    position: static;
+    height: initial;
+    font-size: 26px;
+  }
+
+  .navbar {
+    flex-direction: column-reverse;
+    gap: 1em;
+    margin: 2em 0 1em 0;
+  }
+
+  .navbar ul {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1em;
+  }
+
+  .navbar ul:last-child {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #border {
+    border: none;
+  }
+
+  /* main index*/
+  main {
+    display: flex;
+    flex-direction: column;
+    padding: 0 5%;
+  }
+
+  .video {
+    order: -1;
+    padding: 0;
+    height: 220px;
+  }
+  .video iframe {
+    height: 100%;
+    width: 100%;
+  }
+
+  .hero {
+    background: none;
+    height: auto;
+    padding-bottom: 2em;
+    order: -2;
+  }
+
+  .hero_logo {
+    padding: 0;
+  }
+
+  .hero_logo img {
+    width: 100%;
+  }
+
+  .article_1 {
+    padding-top: 3em;
+  }
+
+  .article_text {
+    flex-direction: column;
+  }
+
+  /* gallery */
+  .images_con img:last-child {
+    display: none;
+  }
+
+  .images_con {
+    width: 100%;
+    height: 100%;
+  }
+
+  .images_small {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .images_small img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Character */
+
+  .show {
+    display: none;
+  }
+
+  .hide {
+    display: flex;
+    flex-direction: column;
+    gap: 5em;
+  }
+
+  .hide section p {
+    color: #999;
+  }
+
+  .hide .first_para {
+    padding: 1.5em 0;
+  }
+
+  .hide section h4 {
+    color: #e5e5e5;
+    padding-bottom: 2em;
+  }
+
+  .hide .flex_con_chara_white p {
+    color: #fff;
+  }
+
+  .hide section img {
+    width: 100%;
+  }
 }
