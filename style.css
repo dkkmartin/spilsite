@@ -29,7 +29,6 @@ header {
   align-items: center;
   font-family: 'Open Sans', sans-serif;
   font-style: italic;
-  color: #999;
 }
 
 header a {
@@ -48,8 +47,13 @@ header a {
 .navbar ul {
   display: flex;
   list-style-type: none;
-  gap: 100px;
+  gap: 30px;
 }
+
+.navbar ul:first-child {
+  width: 100%;
+}
+
 .navbar ul:last-child {
   gap: 22px;
 }
@@ -207,6 +211,54 @@ footer {
 
 .red {
   color: #6c0c0e;
+}
+
+/* contact */
+
+.form_contact {
+  padding: 0 10%;
+  color: #e5e5e5;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+.form_contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+#message {
+  height: 320px;
+}
+.form_contact h3 {
+  padding-bottom: 4em;
+}
+
+.form_contact input,
+.form_contact textarea {
+  width: 100%;
+  height: 69px;
+  background-color: #1a1a1a;
+  border: 1px solid #6c0c0e;
+  color: #e5e5e5;
+  font-size: 24px;
+  font-family: 'Oswald', sans-serif;
+  padding: 0 1%;
+}
+
+.form_submit {
+  display: flex;
+}
+
+.form_submit input {
+  width: initial;
+}
+
+.form_submit div:first-child {
+  display: flex;
 }
 
 /* Media queries */
