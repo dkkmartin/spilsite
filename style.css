@@ -36,7 +36,7 @@ header a {
   color: #999;
 }
 
-#border a {
+.border a {
   color: #fff;
 }
 .navbar {
@@ -58,9 +58,9 @@ header a {
   gap: 22px;
 }
 
-#border {
+.border {
   border-bottom: 4px solid #6c0c0e;
-  padding: 0 5%;
+  padding: 0 1%;
 }
 
 /* main */
@@ -77,6 +77,7 @@ main article {
 
 .hero {
   background: url(img/hero_bg.jpg) no-repeat;
+  background-size: 100%;
   height: 720px;
 }
 
@@ -142,18 +143,18 @@ footer {
 
 /* gallery */
 
-.hide {
-  display: none;
-}
-
 .images_con {
   max-width: 1041px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .images_small {
   display: flex;
   gap: 26px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .images_con img {
@@ -161,6 +162,11 @@ footer {
 }
 
 /* characters */
+
+.hide {
+  display: none;
+}
+
 .main_characters {
   max-width: 1280px;
   padding: 0 10%;
@@ -246,15 +252,34 @@ textarea:focus {
   color: #e5e5e5;
   font-size: 24px;
   font-family: 'Oswald', sans-serif;
-  padding: 0 1%;
+  padding: 1% 1%;
 }
 
 .form_submit {
   display: flex;
+  justify-content: space-between;
 }
 
 .form_submit input {
   width: initial;
+}
+
+.newsletter_check {
+  gap: 1em;
+  align-items: center;
+}
+
+.newsletter_check input {
+  width: 2em;
+}
+
+#send_msg {
+  width: 10em;
+  transition: background-color 0.5s;
+}
+
+#send_msg:hover {
+  background-color: #343434;
 }
 
 .form_submit div:first-child {
@@ -342,6 +367,20 @@ textarea:focus {
 
   .main_characters section h4:nth-child(even) {
     padding-top: 0;
+  }
+
+  /* Contact */
+
+  .newsletter_check p {
+    width: 50%;
+  }
+
+  .form_contact {
+    padding: 0 5%;
+  }
+
+  .form_submit {
+    gap: 1em;
   }
 }
 
@@ -468,4 +507,54 @@ textarea:focus {
   .hide section img {
     width: 100%;
   }
+
+  /* contact */
+
+  .form_submit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .newsletter_check {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 550px) and (min-width: 450px) {
+  /* Header */
+  /* Making sure its not overlapping eachother */
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar ul {
+    justify-content: center;
+  }
+}
+
+/* Hero logo */
+
+@media only screen and (max-width: 1140px) and (min-width: 800px) {
+  /* Making sure Gallery images scales probably */
+  .images_con {
+    padding: 0 5%;
+  }
+
+  /* Making sure hero logo scales probably */
+  .hero_logo img {
+    width: clamp(30%, 60%, 100%);
+  }
+
+  /* Making sure form button does not overlap */
+
+  .form_submit {
+    gap: 1em;
+  }
+}
+
+/* JS animation */
+
+.on_hover {
+  transform: scale(1.15);
+  transition: transform 0.5s;
 }
