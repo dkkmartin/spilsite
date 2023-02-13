@@ -36,7 +36,8 @@ header a {
   color: #999;
 }
 
-.border a {
+.border a,
+.border_solo a {
   color: #fff;
 }
 .navbar {
@@ -58,9 +59,13 @@ header a {
   gap: 22px;
 }
 
-.border {
+.border_solo {
   border-bottom: 4px solid #6c0c0e;
   padding: 0 1%;
+}
+
+.border {
+  border-bottom: 4px solid #6c0c0e;
 }
 
 /* main */
@@ -288,6 +293,7 @@ textarea:focus {
 
 /* Media queries */
 
+/* Tablet */
 @media only screen and (max-width: 800px) {
   /* header */
 
@@ -338,7 +344,7 @@ textarea:focus {
   /* Gallery */
 
   .images_con {
-    padding: 0 5%;
+    padding: 2em 5% 0 5%;
   }
 
   .images_small {
@@ -357,7 +363,7 @@ textarea:focus {
   /* Characters */
 
   .main_characters {
-    padding: 0 5%;
+    padding: 2em 5% 0 5%;
     gap: 1em;
   }
 
@@ -376,7 +382,7 @@ textarea:focus {
   }
 
   .form_contact {
-    padding: 0 5%;
+    padding: 2em 5% 0 5%;
   }
 
   .form_submit {
@@ -520,6 +526,8 @@ textarea:focus {
   }
 }
 
+/*Navbar*/
+
 @media only screen and (max-width: 550px) and (min-width: 450px) {
   /* Header */
   /* Making sure its not overlapping eachother */
@@ -549,6 +557,14 @@ textarea:focus {
 
   .form_submit {
     gap: 1em;
+  }
+}
+
+/* main_characters */
+
+@media only screen and (max-width: 900px) and (min-width: 800px) {
+  .main_characters section img {
+    width: clamp(90%, 100%, 100%);
   }
 }
 
