@@ -4,7 +4,15 @@
   imageCon.forEach((img) => {
     img.addEventListener('click', () => {
       bigImg.src = img.src;
+      imageCon.forEach((e) => {
+        e.style.opacity = '0.5'
+        if (e.src === bigImg.src) {
+          e.style.opacity = '1'
+        }
+      })
+
     });
+
   });
 })();
 

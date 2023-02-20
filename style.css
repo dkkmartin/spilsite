@@ -160,10 +160,11 @@ footer {
   gap: 26px;
   flex-wrap: wrap;
   justify-content: center;
+  padding-top: 1em;
 }
 
-.images_con img {
-  padding-top: 1em;
+.big_image {
+  margin-top: 1em;
 }
 
 /* characters */
@@ -571,6 +572,6 @@ textarea:focus {
 /* JS animation */
 
 .on_hover {
-  transform: scale(1.15);
+  transform: scale(1.1);
   transition: transform 0.5s;
 }
