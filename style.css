@@ -498,6 +498,10 @@ textarea:focus {
     padding: 1.5em 0;
   }
 
+  .hide .first__para__hidden {
+    display: none;
+  }
+
   .hide section h4 {
     color: #e5e5e5;
     padding-bottom: 2em;
@@ -509,6 +513,14 @@ textarea:focus {
 
   .hide section img {
     width: 100%;
+  }
+
+  .read__more {
+    font-style: italic;
+    border-bottom: 1px solid #6c0c0e;
+    color: #e5e5e5 !important;
+    margin-bottom: 2em;
+    text-align: center;
   }
 
   /* contact */
