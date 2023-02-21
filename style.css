@@ -500,6 +500,7 @@ textarea:focus {
 
   .hide .first__para__hidden {
     display: none;
+    transition-duration: 1s;
   }
 
   .hide section h4 {
