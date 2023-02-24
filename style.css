@@ -158,13 +158,46 @@ footer {
 .images_small {
   display: flex;
   gap: 26px;
-  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   padding-top: 1em;
 }
 
-.big_image {
+.thumb {
+  width: 100%;
+  height: auto;
+}
+
+.big__image__con {
   margin-top: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.big_image {
+  max-width: 100%;
+  height: auto;
+  border: solid 1px #e5e5e5;
+}
+.arrow__left,
+.arrow__right {
+  cursor: pointer;
+  font-size: 40px;
+  position: relative;
+  opacity: 0.4;
+}
+
+.arrow__left {
+  left: 1em;
+}
+
+.arrow__right {
+  right: 1em;
+}
+
+.active {
+  border: solid 1px #e5e5e5;
 }
 
 /* characters */
