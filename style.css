@@ -497,13 +497,18 @@ textarea:focus {
 
   /* gallery */
 
-  .big_image {
+  .big__image__con {
     display: none;
   }
 
   .images_con {
     width: 100%;
     height: 100%;
+  }
+
+  .images_small {
+    flex-direction: column;
+    gap: 1em;
   }
 
   .images_small img {
